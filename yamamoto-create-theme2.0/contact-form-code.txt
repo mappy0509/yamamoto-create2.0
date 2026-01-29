@@ -1,0 +1,32 @@
+<div class="grid md:grid-cols-2 gap-6">
+    <div class="space-y-2">
+        <label class="text-xs font-bold text-slate-500 block">お名前 <span class="text-red-500">*</span></label>
+        [text* your-name class:form-input class:w-full placeholder "山田 太郎"]
+    </div>
+    <div class="space-y-2">
+        <label class="text-xs font-bold text-slate-500 block">貴社名</label>
+        [text your-company class:form-input class:w-full placeholder "〇〇株式会社"]
+    </div>
+</div>
+
+<div class="space-y-2 mt-6">
+    <label class="text-xs font-bold text-slate-500 block">メールアドレス <span class="text-red-500">*</span></label>
+    [email* your-email class:form-input class:w-full placeholder "info@example.com"]
+</div>
+
+<div class="space-y-2 mt-6">
+    <label class="text-xs font-bold text-slate-500 block">お問い合わせ内容</label>
+    [textarea your-message class:form-input class:w-full rows:5 placeholder "その他ご要望などがございましたらご記入ください。"]
+</div>
+
+<!-- Hidden Fields for Simulation Integration -->
+<div style="display:none;">
+    <label>選択されたプラン</label>
+    [textarea selected_plans id:selected_plans]
+    <label>概算見積もり額</label>
+    [text estimated_cost id:estimated_cost]
+</div>
+
+<div class="pt-8 text-center">
+    [submit class:bg-brand-gold class:text-white class:font-bold class:px-12 class:py-4 class:rounded-lg class:shadow-xl class:hover:bg-amber-600 class:transition class:transform class:hover:scale-105 "上記の内容で送信する"]
+</div>

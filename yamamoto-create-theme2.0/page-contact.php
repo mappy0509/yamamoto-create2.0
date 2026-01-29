@@ -5,23 +5,23 @@
 get_header(); ?>
 
 <main id="main-container">
-    <div id="page-contact" class="page-section active pt-32 pb-20">
-        <div class="px-6 md:px-20 relative z-10 max-w-4xl mx-auto">
+    <div id="page-contact" class="page-section active pt-32 pb-20 w-full overflow-x-hidden">
+        <div class="px-4 md:px-20 relative z-10 max-w-4xl mx-auto w-full">
             
             <!-- Header -->
             <div class="text-center mb-12">
                 <p class="text-blue-600 font-bold tracking-widest text-xs mb-6 font-mono">CONTACT US</p>
-                <h2 class="text-4xl md:text-6xl font-black mb-8 tracking-tight text-slate-900 font-jp leading-tight">
+                <h2 class="text-4xl md:text-6xl font-black mb-8 tracking-tight text-slate-900 font-jp leading-tight break-words">
                     ビジネスの成長を、<br>ここから始めよう。
                 </h2>
-                <p class="text-slate-500 mb-12 font-medium leading-loose">
-                    Webサイト制作、システム開発、マーケティングのご相談など<br>
+                <p class="text-slate-500 mb-12 font-medium leading-loose text-sm md:text-base">
+                    Webサイト制作、システム開発、マーケティングのご相談など<br class="hidden md:inline">
                     まずはお気軽にお問い合わせください。
                 </p>
             </div>
 
             <!-- Contact Form Area -->
-            <div class="bg-white/80 backdrop-blur-xl p-8 md:p-12 rounded-2xl shadow-xl border border-white">
+            <div class="bg-white/80 backdrop-blur-xl p-6 md:p-12 rounded-2xl shadow-xl border border-white w-full">
                 <?php
                 // 固定ページの本文（ショートコードなど）を表示
                 while ( have_posts() ) : the_post();
@@ -31,27 +31,27 @@ get_header(); ?>
                 
                 <?php /* Contact Form 7 を使用しない場合の代替HTML（開発用） */ ?>
                 <?php if ( ! shortcode_exists( 'contact-form-7' ) ) : ?>
-                    <form action="#" method="POST" class="space-y-6">
+                    <form action="#" method="POST" class="space-y-6 w-full">
                         <div class="grid md:grid-cols-2 gap-6">
                             <div class="space-y-2">
                                 <label for="name" class="text-xs font-bold text-slate-500 block">お名前 <span class="text-red-500">*</span></label>
-                                <input type="text" id="name" name="name" class="form-input" placeholder="山田 太郎" required>
+                                <input type="text" id="name" name="name" class="form-input w-full" placeholder="山田 太郎" required>
                             </div>
                             <div class="space-y-2">
                                 <label for="company" class="text-xs font-bold text-slate-500 block">貴社名</label>
-                                <input type="text" id="company" name="company" class="form-input" placeholder="〇〇株式会社">
+                                <input type="text" id="company" name="company" class="form-input w-full" placeholder="〇〇株式会社">
                             </div>
                         </div>
 
                         <div class="space-y-2">
                             <label for="email" class="text-xs font-bold text-slate-500 block">メールアドレス <span class="text-red-500">*</span></label>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="info@example.com" required>
+                            <input type="email" id="email" name="email" class="form-input w-full" placeholder="info@example.com" required>
                         </div>
 
                         <div class="space-y-2">
                             <label for="category" class="text-xs font-bold text-slate-500 block">ご相談内容 <span class="text-red-500">*</span></label>
-                            <div class="relative">
-                                <select id="category" name="category" class="form-input appearance-none cursor-pointer">
+                            <div class="relative w-full">
+                                <select id="category" name="category" class="form-input w-full appearance-none cursor-pointer">
                                     <option value="" disabled selected>選択してください</option>
                                     <option value="web">Webサイト制作・リニューアル</option>
                                     <option value="system">システム・アプリ開発</option>
@@ -67,7 +67,7 @@ get_header(); ?>
 
                         <div class="space-y-2">
                             <label for="message" class="text-xs font-bold text-slate-500 block">お問い合わせ内容 <span class="text-red-500">*</span></label>
-                            <textarea id="message" name="message" rows="5" class="form-input" placeholder="プロジェクトの概要やご予算、納期のご希望などをご記入ください。" required></textarea>
+                            <textarea id="message" name="message" rows="5" class="form-input w-full" placeholder="プロジェクトの概要やご予算、納期のご希望などをご記入ください。" required></textarea>
                         </div>
 
                         <div class="pt-4 text-center">
